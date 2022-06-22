@@ -10,7 +10,7 @@ public class InputUtil {
     private InputUtil() {
     }
 
-    public static String readLine(String description) {
+    public static String outputDescriptionAndReadLine(String description) {
         String line = null;
 
         try {
