@@ -9,7 +9,7 @@ public class Task3 {
 
     public static void main(String[] args) {
         System.out.println("Задание 3: на входе есть числовой массив, необходимо вывести элементы массива кратные 3");
-        int[] array = parseAndConvert(outputDescriptionAndReadLine("Введите массив целых чисел через пробел:"));
+        int[] array = parse(outputDescriptionAndReadLine("Введите массив целых чисел через пробел:"));
         filterAndPrint(array);
         System.out.println("Задание 3 завершено.");
         close();
@@ -21,7 +21,7 @@ public class Task3 {
                 .forEach(System.out::println);
     }
 
-    private static int[] parseAndConvert(String line) {
+    private static int[] parse(String line) {
         return Arrays.stream(line.split(" "))
                 .mapToInt(InputUtil::parse)
                 .toArray();
